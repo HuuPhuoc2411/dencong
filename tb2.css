@@ -118,3 +118,51 @@ body{
       );
       box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
    }
+   button {
+    border-radius: 100%;
+    /* Bo tròn gốc */
+    background-color: #00f2ff;
+    /* Màu nền */
+    color: #ffffff;
+    /* Màu chữ */
+    /* padding: 10px 20px; */
+    /* Kích thước */
+    border: none;
+    /* Loại bỏ viền */
+    height: 50px;color: rgb(255, 255, 255);
+    background-color: rgb(255, 94, 0);
+    width: 50px;
+
+  }
+
+  /* Kiểu dáng cho phần tử input */
+  input[type="number"] {
+    border-radius: 10px;
+    /* Bo tròn gốc */
+    border: 2px solid #00d9ff;
+    /* Viền xanh */
+    padding: 10px;
+    /* Kích thước */
+    outline: none;
+    /* Loại bỏ đường viền khi được focus */
+    box-shadow: 0 0 10px #ff8800;
+    /* Đổ bóng */
+    height: 40px;
+    width: 90px;
+  }
+
+  input[type="number2"] {
+    border-radius: 10px;
+    /* Bo tròn gốc */
+    border: 2px solid #00d9ff;
+    /* Viền xanh */
+    padding: 10px;
+    /* Kích thước */
+    outline: none;
+    /* Loại bỏ đường viền khi được focus */
+    box-shadow: 0 0 10px #00ff00;
+    /* Đổ bóng */
+    height: 40px;
+    width: 90px;
+    /* margin-left: 0px; */
+  }
