@@ -8,7 +8,7 @@ body {
 .container {
     background: #f2ecec;
     border-radius: 30px;
-    height: 650px;
+    height: 890px;
     width: 350px;
 }
 .csw-btn-button {
@@ -98,6 +98,23 @@ body{
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
    }
+   .btn6-hover2 {
+    width: 160px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 160px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 100px;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+   }
    .btn5-hover2:hover {
     background-position: 100% 0;
     /* moz-transition: all .4s ease-in-out; */
@@ -105,7 +122,17 @@ body{
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
    }
+   .btn6-hover2:hover {
+    background-position: 100% 0;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+   }
    .btn5-hover2:focus {
+    outline: none;
+   }
+   .btn6-hover2:focus {
     outline: none;
    }
    .btn5-hover2.btn6 {
@@ -118,6 +145,16 @@ body{
       );
       box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
    }
+   .btn6-hover2.btn6 {
+    background-image: linear-gradient(
+      to right,
+      #ef6161,
+      #f25555,
+      #fb2222,
+      #f80505
+    );
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+ }
    button {
     border-radius: 100%;
     /* Bo tròn gốc */

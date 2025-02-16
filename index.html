@@ -53,7 +53,8 @@
                 <img name="den" src="./sang.png" alt="sang" width="30%"
                     style="border-radius: 10px;">
 
-                <p id="time1" style="font-size: 20px;color: #002fff;">Giờ mở đèn</p>
+                <p id="time1" style="font-size: 20px;color: #002fff;">Giờ mở
+                    đèn</p>
                 <input type="number" id="inputNumber" placeholder="Giờ">
                 <button id="submitButton">Gửi</button>
 
@@ -61,10 +62,16 @@
                     đèn</p>
                 <input type="number2" id="inputNumber2" placeholder="Giờ">
                 <button id="submitButton2">Gửi</button>
+                <h4
+                    style="text-align:center; margin-top: 5px; background-color:aqua; height:50px; border-radius:20px; color:rgb(2, 2, 96);border-color:rgb(251, 3, 3);padding-top: 10px;">MỞ
+                    CỬA</h4>
+                <a><button id="luu_a2" class="btn6-hover2 btn6">Nút mở</button></a>
+
             </center>
 
         </body>
-        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
         <script
             src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
 
@@ -105,25 +112,7 @@ valueTemp7.on('value',snap =>{
    
   
 });
-// var valueTemp4 = firebase.database().ref().child('thucan');
-// valueTemp4.on('value',snap =>{
-//     if(snap.val()==0){
-//     document.getElementById("trangthai").innerHTML="Đã tắt chế độ tự động";
-//     }
-//     if(snap.val()==1){
-//         document.getElementById("trangthai").innerHTML="Đã bật chế độ tự động";
-//         }
-// });
-
-// var valueTemp5 = firebase.database().ref().child('trangthai');
-// valueTemp5.on('value',snap =>{
-//     if(snap.val()==0){
-//     document.getElementById("trangthai2").innerHTML="Đã tắt";
-//     }
-//     if(snap.val()==1){
-//         document.getElementById("trangthai2").innerHTML="Đã bật";
-//         }
-// });
+//////////////////////////
 var dulieu2=firebase.database();
 var x=0;
 
@@ -156,6 +145,58 @@ if(x==1){
 }
 
 }
+///////////////////////////////
+//////////////////////////
+
+// var dulieu3=firebase.database();
+// var x=0;
+
+// luu_a2.onclick =function(){
+// x++;
+
+//    console.log(x);
+  
+  
+// if(x>1){
+//     x=0;
+// }
+// if(x==0){
+//     document.getElementById("luu_a2").innerHTML="Đang đóng";
+//     //document.images['den'].src ='./tat.png' ;
+//     dulieu2.ref().update({
+//         "key":0
+       
+//       });
+// }
+// if(x==1){
+//     document.getElementById("luu_a2").innerHTML="Đang mở";
+//    // document.images['den'].src ='./sang.png' ;
+//     dulieu2.ref().update({
+//         "key":1
+       
+//       });
+// }
+
+// }
+///////////////////////////////
+var dulieu3 = firebase.database();
+
+luu_a2.onclick = function () {
+  // Khi bấm vào nút, set giá trị "key" lên 1
+  document.getElementById("luu_a2").innerHTML = "Cửa đang mở";
+  dulieu3.ref().update({
+    key: 1,
+  });
+
+  // Sau 4 giây, tự động đặt lại "key" về 0
+  setTimeout(function () {
+    document.getElementById("luu_a2").innerHTML = "Nhấn để mở";
+    dulieu3.ref().update({
+      key: 0,
+    });
+  }, 5000); // 4000ms = 4 giây
+};
+/////////////////////////
 var valuehouron = firebase.database().ref().child('/houron');
 valuehouron.on('value',snap =>{
 
